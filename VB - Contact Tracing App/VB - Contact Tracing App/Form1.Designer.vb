@@ -26,8 +26,8 @@ Partial Class Form1
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.grpbxTitle = New System.Windows.Forms.GroupBox()
-        Me.lblContactTraceForm = New System.Windows.Forms.Label()
         Me.lblPleaseFillUp = New System.Windows.Forms.Label()
+        Me.lblContactTraceForm = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.txtboxFirstName = New System.Windows.Forms.TextBox()
         Me.txtbxLastName = New System.Windows.Forms.TextBox()
@@ -47,6 +47,10 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblInstructions = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpbxTitle.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -78,16 +82,6 @@ Partial Class Form1
         Me.grpbxTitle.TabIndex = 2
         Me.grpbxTitle.TabStop = False
         '
-        'lblContactTraceForm
-        '
-        Me.lblContactTraceForm.AutoSize = True
-        Me.lblContactTraceForm.Font = New System.Drawing.Font("Franklin Gothic Demi", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblContactTraceForm.Location = New System.Drawing.Point(29, 27)
-        Me.lblContactTraceForm.Name = "lblContactTraceForm"
-        Me.lblContactTraceForm.Size = New System.Drawing.Size(319, 37)
-        Me.lblContactTraceForm.TabIndex = 3
-        Me.lblContactTraceForm.Text = "Contact Tracing Form"
-        '
         'lblPleaseFillUp
         '
         Me.lblPleaseFillUp.AutoSize = True
@@ -97,6 +91,16 @@ Partial Class Form1
         Me.lblPleaseFillUp.Size = New System.Drawing.Size(322, 21)
         Me.lblPleaseFillUp.TabIndex = 4
         Me.lblPleaseFillUp.Text = "* Please Fill up the informations correctly *"
+        '
+        'lblContactTraceForm
+        '
+        Me.lblContactTraceForm.AutoSize = True
+        Me.lblContactTraceForm.Font = New System.Drawing.Font("Franklin Gothic Demi", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblContactTraceForm.Location = New System.Drawing.Point(29, 27)
+        Me.lblContactTraceForm.Name = "lblContactTraceForm"
+        Me.lblContactTraceForm.Size = New System.Drawing.Size(319, 37)
+        Me.lblContactTraceForm.TabIndex = 3
+        Me.lblContactTraceForm.Text = "Contact Tracing Form"
         '
         'lblFirstName
         '
@@ -255,11 +259,51 @@ Partial Class Form1
         Me.lblInstructions.TabIndex = 20
         Me.lblInstructions.Text = "Instructions: Check Yes or No depending on the questions applies."
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(62, 356)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(219, 13)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "Are you experiencing any sickness recently? "
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(62, 382)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(294, 13)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "Have you traveled outside of the country in the past 14days?"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(62, 409)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(304, 13)
+        Me.Label5.TabIndex = 23
+        Me.Label5.Text = "Do you have a close contact with a probable covid 19 person?"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(62, 332)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(198, 13)
+        Me.Label6.TabIndex = 24
+        Me.Label6.Text = "Have you've been tested for COVID-19?"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(598, 523)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblInstructions)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtbxTemperature)
@@ -316,4 +360,8 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents lblInstructions As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
 End Class
