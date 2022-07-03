@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.pickerDate = New System.Windows.Forms.DateTimePicker()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.grpbxTitle = New System.Windows.Forms.GroupBox()
         Me.lblPleaseFillUp = New System.Windows.Forms.Label()
@@ -45,7 +45,7 @@ Partial Class Form1
         Me.txtbxTemperature = New System.Windows.Forms.TextBox()
         Me.lblTemperature = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.timerClock = New System.Windows.Forms.Timer(Me.components)
         Me.lblInstructions = New System.Windows.Forms.Label()
         Me.lblQuestion2 = New System.Windows.Forms.Label()
         Me.lblQuestion3 = New System.Windows.Forms.Label()
@@ -60,17 +60,18 @@ Partial Class Form1
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.lblTimer = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpbxTitle.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'DateTimePicker1
+        'pickerDate
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(119, 138)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 0
+        Me.pickerDate.Location = New System.Drawing.Point(119, 138)
+        Me.pickerDate.Name = "pickerDate"
+        Me.pickerDate.Size = New System.Drawing.Size(200, 20)
+        Me.pickerDate.TabIndex = 0
         '
         'PictureBox1
         '
@@ -258,6 +259,11 @@ Partial Class Form1
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Time:"
         '
+        'timerClock
+        '
+        Me.timerClock.Enabled = True
+        Me.timerClock.Interval = 1
+        '
         'lblInstructions
         '
         Me.lblInstructions.AutoSize = True
@@ -393,11 +399,20 @@ Partial Class Form1
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
+        'lblTimer
+        '
+        Me.lblTimer.AutoSize = True
+        Me.lblTimer.Location = New System.Drawing.Point(375, 144)
+        Me.lblTimer.Name = "lblTimer"
+        Me.lblTimer.Size = New System.Drawing.Size(0, 13)
+        Me.lblTimer.TabIndex = 34
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(598, 523)
+        Me.Controls.Add(Me.lblTimer)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.CheckBox7)
         Me.Controls.Add(Me.CheckBox8)
@@ -427,7 +442,7 @@ Partial Class Form1
         Me.Controls.Add(Me.txtboxFirstName)
         Me.Controls.Add(Me.lblFirstName)
         Me.Controls.Add(Me.grpbxTitle)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.pickerDate)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.ShowIcon = False
@@ -443,7 +458,7 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents pickerDate As DateTimePicker
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents grpbxTitle As GroupBox
     Friend WithEvents lblPleaseFillUp As Label
@@ -465,7 +480,7 @@ Partial Class Form1
     Friend WithEvents txtbxTemperature As TextBox
     Friend WithEvents lblTemperature As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents timerClock As Timer
     Friend WithEvents lblInstructions As Label
     Friend WithEvents lblQuestion2 As Label
     Friend WithEvents lblQuestion3 As Label
@@ -480,4 +495,5 @@ Partial Class Form1
     Friend WithEvents CheckBox7 As CheckBox
     Friend WithEvents CheckBox8 As CheckBox
     Friend WithEvents btnSubmit As Button
+    Friend WithEvents lblTimer As Label
 End Class
