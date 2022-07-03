@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.grpbxTitle = New System.Windows.Forms.GroupBox()
@@ -39,10 +40,13 @@ Partial Class Form1
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtbxPhoneNumber = New System.Windows.Forms.TextBox()
         Me.lblPhoneNumber = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtbxTemperature = New System.Windows.Forms.TextBox()
+        Me.lblTemperature = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lblInstructions = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpbxTitle.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -50,7 +54,7 @@ Partial Class Form1
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(183, 138)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(119, 138)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 0
@@ -200,12 +204,12 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         '
-        'TextBox1
+        'txtbxPhoneNumber
         '
-        Me.TextBox1.Location = New System.Drawing.Point(304, 249)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 16
+        Me.txtbxPhoneNumber.Location = New System.Drawing.Point(304, 249)
+        Me.txtbxPhoneNumber.Name = "txtbxPhoneNumber"
+        Me.txtbxPhoneNumber.Size = New System.Drawing.Size(100, 20)
+        Me.txtbxPhoneNumber.TabIndex = 16
         '
         'lblPhoneNumber
         '
@@ -216,30 +220,51 @@ Partial Class Form1
         Me.lblPhoneNumber.TabIndex = 15
         Me.lblPhoneNumber.Text = "Phone Number:"
         '
-        'TextBox2
+        'txtbxTemperature
         '
-        Me.TextBox2.Location = New System.Drawing.Point(484, 249)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(47, 20)
-        Me.TextBox2.TabIndex = 18
+        Me.txtbxTemperature.Location = New System.Drawing.Point(484, 249)
+        Me.txtbxTemperature.Name = "txtbxTemperature"
+        Me.txtbxTemperature.Size = New System.Drawing.Size(47, 20)
+        Me.txtbxTemperature.TabIndex = 18
         '
-        'Label2
+        'lblTemperature
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(410, 252)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 13)
-        Me.Label2.TabIndex = 17
-        Me.Label2.Text = "Temperature:"
+        Me.lblTemperature.AutoSize = True
+        Me.lblTemperature.Location = New System.Drawing.Point(410, 252)
+        Me.lblTemperature.Name = "lblTemperature"
+        Me.lblTemperature.Size = New System.Drawing.Size(70, 13)
+        Me.lblTemperature.TabIndex = 17
+        Me.lblTemperature.Text = "Temperature:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(335, 144)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(33, 13)
+        Me.Label3.TabIndex = 19
+        Me.Label3.Text = "Time:"
+        '
+        'lblInstructions
+        '
+        Me.lblInstructions.AutoSize = True
+        Me.lblInstructions.Font = New System.Drawing.Font("Franklin Gothic Demi", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInstructions.Location = New System.Drawing.Point(107, 290)
+        Me.lblInstructions.Name = "lblInstructions"
+        Me.lblInstructions.Size = New System.Drawing.Size(352, 16)
+        Me.lblInstructions.TabIndex = 20
+        Me.lblInstructions.Text = "Instructions: Check Yes or No depending on the questions applies."
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(598, 471)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(598, 523)
+        Me.Controls.Add(Me.lblInstructions)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtbxTemperature)
+        Me.Controls.Add(Me.lblTemperature)
+        Me.Controls.Add(Me.txtbxPhoneNumber)
         Me.Controls.Add(Me.lblPhoneNumber)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtbxAge)
@@ -284,8 +309,11 @@ Partial Class Form1
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtbxPhoneNumber As TextBox
     Friend WithEvents lblPhoneNumber As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents txtbxTemperature As TextBox
+    Friend WithEvents lblTemperature As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents lblInstructions As Label
 End Class
