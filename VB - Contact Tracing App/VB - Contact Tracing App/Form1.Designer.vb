@@ -47,10 +47,19 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblInstructions = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblQuestion2 = New System.Windows.Forms.Label()
+        Me.lblQuestion3 = New System.Windows.Forms.Label()
+        Me.LblQuestion4 = New System.Windows.Forms.Label()
+        Me.lblQuestion1 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.btnSubmit = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpbxTitle.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -259,51 +268,149 @@ Partial Class Form1
         Me.lblInstructions.TabIndex = 20
         Me.lblInstructions.Text = "Instructions: Check Yes or No depending on the questions applies."
         '
-        'Label2
+        'lblQuestion2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(62, 356)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(219, 13)
-        Me.Label2.TabIndex = 21
-        Me.Label2.Text = "Are you experiencing any sickness recently? "
+        Me.lblQuestion2.AutoSize = True
+        Me.lblQuestion2.Location = New System.Drawing.Point(62, 356)
+        Me.lblQuestion2.Name = "lblQuestion2"
+        Me.lblQuestion2.Size = New System.Drawing.Size(219, 13)
+        Me.lblQuestion2.TabIndex = 21
+        Me.lblQuestion2.Text = "Are you experiencing any sickness recently? "
         '
-        'Label4
+        'lblQuestion3
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(62, 382)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(294, 13)
-        Me.Label4.TabIndex = 22
-        Me.Label4.Text = "Have you traveled outside of the country in the past 14days?"
+        Me.lblQuestion3.AutoSize = True
+        Me.lblQuestion3.Location = New System.Drawing.Point(62, 382)
+        Me.lblQuestion3.Name = "lblQuestion3"
+        Me.lblQuestion3.Size = New System.Drawing.Size(294, 13)
+        Me.lblQuestion3.TabIndex = 22
+        Me.lblQuestion3.Text = "Have you traveled outside of the country in the past 14days?"
         '
-        'Label5
+        'LblQuestion4
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(62, 409)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(304, 13)
-        Me.Label5.TabIndex = 23
-        Me.Label5.Text = "Do you have a close contact with a probable covid 19 person?"
+        Me.LblQuestion4.AutoSize = True
+        Me.LblQuestion4.Location = New System.Drawing.Point(62, 409)
+        Me.LblQuestion4.Name = "LblQuestion4"
+        Me.LblQuestion4.Size = New System.Drawing.Size(304, 13)
+        Me.LblQuestion4.TabIndex = 23
+        Me.LblQuestion4.Text = "Do you have a close contact with a probable covid 19 person?"
         '
-        'Label6
+        'lblQuestion1
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(62, 332)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(198, 13)
-        Me.Label6.TabIndex = 24
-        Me.Label6.Text = "Have you've been tested for COVID-19?"
+        Me.lblQuestion1.AutoSize = True
+        Me.lblQuestion1.Location = New System.Drawing.Point(62, 332)
+        Me.lblQuestion1.Name = "lblQuestion1"
+        Me.lblQuestion1.Size = New System.Drawing.Size(198, 13)
+        Me.lblQuestion1.TabIndex = 24
+        Me.lblQuestion1.Text = "Have you've been tested for COVID-19?"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(384, 328)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(44, 17)
+        Me.CheckBox1.TabIndex = 25
+        Me.CheckBox1.Text = "Yes"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(450, 328)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(40, 17)
+        Me.CheckBox2.TabIndex = 26
+        Me.CheckBox2.Text = "No"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(450, 352)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(40, 17)
+        Me.CheckBox3.TabIndex = 28
+        Me.CheckBox3.Text = "No"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(384, 352)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(44, 17)
+        Me.CheckBox4.TabIndex = 27
+        Me.CheckBox4.Text = "Yes"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(450, 378)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(40, 17)
+        Me.CheckBox5.TabIndex = 30
+        Me.CheckBox5.Text = "No"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(384, 378)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(44, 17)
+        Me.CheckBox6.TabIndex = 29
+        Me.CheckBox6.Text = "Yes"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Location = New System.Drawing.Point(450, 405)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(40, 17)
+        Me.CheckBox7.TabIndex = 32
+        Me.CheckBox7.Text = "No"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.Location = New System.Drawing.Point(384, 405)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(44, 17)
+        Me.CheckBox8.TabIndex = 31
+        Me.CheckBox8.Text = "Yes"
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
+        'btnSubmit
+        '
+        Me.btnSubmit.Location = New System.Drawing.Point(139, 454)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnSubmit.TabIndex = 33
+        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(598, 523)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.btnSubmit)
+        Me.Controls.Add(Me.CheckBox7)
+        Me.Controls.Add(Me.CheckBox8)
+        Me.Controls.Add(Me.CheckBox5)
+        Me.Controls.Add(Me.CheckBox6)
+        Me.Controls.Add(Me.CheckBox3)
+        Me.Controls.Add(Me.CheckBox4)
+        Me.Controls.Add(Me.CheckBox2)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.lblQuestion1)
+        Me.Controls.Add(Me.LblQuestion4)
+        Me.Controls.Add(Me.lblQuestion3)
+        Me.Controls.Add(Me.lblQuestion2)
         Me.Controls.Add(Me.lblInstructions)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtbxTemperature)
@@ -360,8 +467,17 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents lblInstructions As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblQuestion2 As Label
+    Friend WithEvents lblQuestion3 As Label
+    Friend WithEvents LblQuestion4 As Label
+    Friend WithEvents lblQuestion1 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents CheckBox6 As CheckBox
+    Friend WithEvents CheckBox7 As CheckBox
+    Friend WithEvents CheckBox8 As CheckBox
+    Friend WithEvents btnSubmit As Button
 End Class
