@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Dim Gender, Y1, Y2, Y3, Y4, N1, N2, N3, N4 As String
+    Dim Gender, Q1, Q2, Q3, Q4 As String
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         Dim form As System.IO.StreamWriter
@@ -18,10 +18,10 @@
         form.WriteLine("Gender: " + Gender)
         form.WriteLine("")
         form.WriteLine("Health Questions")
-        form.WriteLine("Have you've been tested for COVID-19? " + Y1 + N1)
-        form.WriteLine("Are you experiencing any sickness recently? " + Y2 + N2)
-        form.WriteLine("Have you traveled outside of the country in the past 14days? " + Y3 + N3)
-        form.WriteLine("Do you have a close contact with a probable covid 19 person? " + Y4 + N4)
+        form.WriteLine("Have you've been tested for COVID-19? " + Q1)
+        form.WriteLine("Are you experiencing any sickness recently? " + Q2)
+        form.WriteLine("Have you traveled outside of the country in the past 14days? " + Q3)
+        form.WriteLine("Do you have a close contact with a probable covid 19 person? " + Q4)
         form.WriteLine("__________________________________________________________________________")
         form.WriteLine("")
         form.WriteLine("")
@@ -56,31 +56,31 @@
     End Sub
 
     Private Sub rbYes4_CheckedChanged(sender As Object, e As EventArgs) Handles rbYes4.CheckedChanged
-        Y4 = "Yes"
+        Q4 = "Yes"
     End Sub
 
     Private Sub rbYes3_CheckedChanged(sender As Object, e As EventArgs) Handles rbYes3.CheckedChanged
-        Y3 = "Yes"
+        Q3 = "Yes"
     End Sub
 
     Private Sub rbYes2_CheckedChanged(sender As Object, e As EventArgs) Handles rbYes2.CheckedChanged
-        Y2 = "Yes"
+        Q2 = "Yes"
     End Sub
 
     Private Sub rbYes1_CheckedChanged(sender As Object, e As EventArgs) Handles rbYes1.CheckedChanged
-        Y1 = "Yes"
+        Q1 = "Yes"
     End Sub
 
     Private Sub rbNo1_CheckedChanged(sender As Object, e As EventArgs) Handles rbNo1.CheckedChanged
-        N1 = "No"
+        Q1 = "No"
     End Sub
 
     Private Sub rbNo3_CheckedChanged(sender As Object, e As EventArgs) Handles rbNo3.CheckedChanged
-        N3 = "No"
+        Q3 = "No"
     End Sub
 
     Private Sub rbNo2_CheckedChanged(sender As Object, e As EventArgs) Handles rbNo2.CheckedChanged
-        N2 = "No"
+        Q2 = "No"
     End Sub
 
     Private Sub rbMale_CheckedChanged(sender As Object, e As EventArgs) Handles rbMale.CheckedChanged
@@ -115,7 +115,7 @@
     End Sub
 
     Private Sub rbNo4_CheckedChanged(sender As Object, e As EventArgs) Handles rbNo4.CheckedChanged
-        N4 = "No"
+        Q4 = "No"
     End Sub
 
     Private Sub txtbxTemperature_keypress(sender As Object, e As KeyPressEventArgs) Handles txtbxTemperature.KeyPress
