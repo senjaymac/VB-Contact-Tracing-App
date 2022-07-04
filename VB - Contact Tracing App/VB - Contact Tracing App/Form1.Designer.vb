@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.pickerDate = New System.Windows.Forms.DateTimePicker()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.grpbxTitle = New System.Windows.Forms.GroupBox()
@@ -65,6 +66,7 @@ Partial Class Form1
         Me.grpbxQ4 = New System.Windows.Forms.GroupBox()
         Me.rbNo4 = New System.Windows.Forms.RadioButton()
         Me.rbYes4 = New System.Windows.Forms.RadioButton()
+        Me.btnClear = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpbxTitle.SuspendLayout()
         Me.grpbxGender.SuspendLayout()
@@ -83,14 +85,17 @@ Partial Class Form1
         '
         'PictureBox1
         '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(366, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(117, 100)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
         'grpbxTitle
         '
+        Me.grpbxTitle.BackColor = System.Drawing.Color.PaleGreen
         Me.grpbxTitle.Controls.Add(Me.lblPleaseFillUp)
         Me.grpbxTitle.Controls.Add(Me.lblContactTraceForm)
         Me.grpbxTitle.Controls.Add(Me.PictureBox1)
@@ -324,9 +329,9 @@ Partial Class Form1
         '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(152, 508)
+        Me.btnSubmit.Location = New System.Drawing.Point(338, 503)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnSubmit.Size = New System.Drawing.Size(120, 30)
         Me.btnSubmit.TabIndex = 33
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
@@ -463,11 +468,22 @@ Partial Class Form1
         Me.rbYes4.Text = "Yes"
         Me.rbYes4.UseVisualStyleBackColor = True
         '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(152, 503)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(120, 30)
+        Me.btnClear.TabIndex = 38
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(598, 567)
+        Me.BackColor = System.Drawing.Color.LightGreen
+        Me.ClientSize = New System.Drawing.Size(565, 567)
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.grpbxQ4)
         Me.Controls.Add(Me.grpbxQ3)
         Me.Controls.Add(Me.grpbxQ2)
@@ -496,6 +512,8 @@ Partial Class Form1
         Me.Controls.Add(Me.grpbxTitle)
         Me.Controls.Add(Me.pickerDate)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(581, 606)
+        Me.MinimumSize = New System.Drawing.Size(581, 606)
         Me.Name = "Form1"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -560,4 +578,5 @@ Partial Class Form1
     Friend WithEvents grpbxQ4 As GroupBox
     Friend WithEvents rbNo4 As RadioButton
     Friend WithEvents rbYes4 As RadioButton
+    Friend WithEvents btnClear As Button
 End Class

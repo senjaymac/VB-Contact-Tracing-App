@@ -91,6 +91,29 @@
         Gender = "Female"
     End Sub
 
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        txtbxFirstName.Clear()
+        txtbxLastName.Clear()
+        txtbxAddress.Clear()
+        txtbxAge.Clear()
+        txtbxPhoneNumber.Clear()
+        txtbxTemperature.Clear()
+
+        rbMale.Checked = False
+        rbFemale.Checked = False
+
+        rbYes1.Checked = False
+        rbYes2.Checked = False
+        rbYes3.Checked = False
+        rbYes4.Checked = False
+
+        rbNo1.Checked = False
+        rbNo2.Checked = False
+        rbNo3.Checked = False
+        rbNo4.Checked = False
+
+    End Sub
+
     Private Sub rbNo4_CheckedChanged(sender As Object, e As EventArgs) Handles rbNo4.CheckedChanged
         Q2 = "No"
     End Sub
