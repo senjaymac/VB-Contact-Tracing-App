@@ -36,10 +36,10 @@ Partial Class Form1
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.lblAge = New System.Windows.Forms.Label()
         Me.txtbxAge = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblGender = New System.Windows.Forms.Label()
+        Me.rbMale = New System.Windows.Forms.RadioButton()
+        Me.rbFemale = New System.Windows.Forms.RadioButton()
+        Me.grpbxGender = New System.Windows.Forms.GroupBox()
         Me.txtbxPhoneNumber = New System.Windows.Forms.TextBox()
         Me.lblPhoneNumber = New System.Windows.Forms.Label()
         Me.txtbxTemperature = New System.Windows.Forms.TextBox()
@@ -51,19 +51,27 @@ Partial Class Form1
         Me.lblQuestion3 = New System.Windows.Forms.Label()
         Me.LblQuestion4 = New System.Windows.Forms.Label()
         Me.lblQuestion1 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.lblTimer = New System.Windows.Forms.Label()
+        Me.grpbxQ1 = New System.Windows.Forms.GroupBox()
+        Me.rbNo1 = New System.Windows.Forms.RadioButton()
+        Me.rbYes1 = New System.Windows.Forms.RadioButton()
+        Me.grpbxQ2 = New System.Windows.Forms.GroupBox()
+        Me.rbNo2 = New System.Windows.Forms.RadioButton()
+        Me.rbYes2 = New System.Windows.Forms.RadioButton()
+        Me.grpbxQ3 = New System.Windows.Forms.GroupBox()
+        Me.rbNo3 = New System.Windows.Forms.RadioButton()
+        Me.rbYes3 = New System.Windows.Forms.RadioButton()
+        Me.grpbxQ4 = New System.Windows.Forms.GroupBox()
+        Me.rbNo4 = New System.Windows.Forms.RadioButton()
+        Me.rbYes4 = New System.Windows.Forms.RadioButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpbxTitle.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.grpbxGender.SuspendLayout()
+        Me.grpbxQ1.SuspendLayout()
+        Me.grpbxQ2.SuspendLayout()
+        Me.grpbxQ3.SuspendLayout()
+        Me.grpbxQ4.SuspendLayout()
         Me.SuspendLayout()
         '
         'pickerDate
@@ -176,47 +184,47 @@ Partial Class Form1
         Me.txtbxAge.Size = New System.Drawing.Size(47, 20)
         Me.txtbxAge.TabIndex = 10
         '
-        'Label1
+        'lblGender
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 13)
-        Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Gender:"
+        Me.lblGender.AutoSize = True
+        Me.lblGender.Location = New System.Drawing.Point(6, 16)
+        Me.lblGender.Name = "lblGender"
+        Me.lblGender.Size = New System.Drawing.Size(45, 13)
+        Me.lblGender.TabIndex = 11
+        Me.lblGender.Text = "Gender:"
         '
-        'RadioButton1
+        'rbMale
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(54, 14)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(48, 17)
-        Me.RadioButton1.TabIndex = 12
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Male"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rbMale.AutoSize = True
+        Me.rbMale.Location = New System.Drawing.Point(54, 14)
+        Me.rbMale.Name = "rbMale"
+        Me.rbMale.Size = New System.Drawing.Size(48, 17)
+        Me.rbMale.TabIndex = 12
+        Me.rbMale.TabStop = True
+        Me.rbMale.Text = "Male"
+        Me.rbMale.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'rbFemale
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(96, 14)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(59, 17)
-        Me.RadioButton2.TabIndex = 13
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Female"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rbFemale.AutoSize = True
+        Me.rbFemale.Location = New System.Drawing.Point(96, 14)
+        Me.rbFemale.Name = "rbFemale"
+        Me.rbFemale.Size = New System.Drawing.Size(59, 17)
+        Me.rbFemale.TabIndex = 13
+        Me.rbFemale.TabStop = True
+        Me.rbFemale.Text = "Female"
+        Me.rbFemale.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'grpbxGender
         '
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Location = New System.Drawing.Point(56, 236)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(158, 42)
-        Me.GroupBox1.TabIndex = 14
-        Me.GroupBox1.TabStop = False
+        Me.grpbxGender.Controls.Add(Me.lblGender)
+        Me.grpbxGender.Controls.Add(Me.rbFemale)
+        Me.grpbxGender.Controls.Add(Me.rbMale)
+        Me.grpbxGender.Location = New System.Drawing.Point(56, 236)
+        Me.grpbxGender.Name = "grpbxGender"
+        Me.grpbxGender.Size = New System.Drawing.Size(158, 42)
+        Me.grpbxGender.TabIndex = 14
+        Me.grpbxGender.TabStop = False
         '
         'txtbxPhoneNumber
         '
@@ -277,122 +285,46 @@ Partial Class Form1
         'lblQuestion2
         '
         Me.lblQuestion2.AutoSize = True
-        Me.lblQuestion2.Location = New System.Drawing.Point(62, 356)
+        Me.lblQuestion2.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQuestion2.Location = New System.Drawing.Point(51, 367)
         Me.lblQuestion2.Name = "lblQuestion2"
-        Me.lblQuestion2.Size = New System.Drawing.Size(219, 13)
+        Me.lblQuestion2.Size = New System.Drawing.Size(221, 15)
         Me.lblQuestion2.TabIndex = 21
         Me.lblQuestion2.Text = "Are you experiencing any sickness recently? "
         '
         'lblQuestion3
         '
         Me.lblQuestion3.AutoSize = True
-        Me.lblQuestion3.Location = New System.Drawing.Point(62, 382)
+        Me.lblQuestion3.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQuestion3.Location = New System.Drawing.Point(51, 417)
         Me.lblQuestion3.Name = "lblQuestion3"
-        Me.lblQuestion3.Size = New System.Drawing.Size(294, 13)
+        Me.lblQuestion3.Size = New System.Drawing.Size(294, 15)
         Me.lblQuestion3.TabIndex = 22
         Me.lblQuestion3.Text = "Have you traveled outside of the country in the past 14days?"
         '
         'LblQuestion4
         '
         Me.LblQuestion4.AutoSize = True
-        Me.LblQuestion4.Location = New System.Drawing.Point(62, 409)
+        Me.LblQuestion4.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblQuestion4.Location = New System.Drawing.Point(51, 461)
         Me.LblQuestion4.Name = "LblQuestion4"
-        Me.LblQuestion4.Size = New System.Drawing.Size(304, 13)
+        Me.LblQuestion4.Size = New System.Drawing.Size(302, 15)
         Me.LblQuestion4.TabIndex = 23
         Me.LblQuestion4.Text = "Do you have a close contact with a probable covid 19 person?"
         '
         'lblQuestion1
         '
         Me.lblQuestion1.AutoSize = True
-        Me.lblQuestion1.Location = New System.Drawing.Point(62, 332)
+        Me.lblQuestion1.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQuestion1.Location = New System.Drawing.Point(51, 332)
         Me.lblQuestion1.Name = "lblQuestion1"
-        Me.lblQuestion1.Size = New System.Drawing.Size(198, 13)
+        Me.lblQuestion1.Size = New System.Drawing.Size(191, 15)
         Me.lblQuestion1.TabIndex = 24
         Me.lblQuestion1.Text = "Have you've been tested for COVID-19?"
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(384, 328)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(44, 17)
-        Me.CheckBox1.TabIndex = 25
-        Me.CheckBox1.Text = "Yes"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(450, 328)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(40, 17)
-        Me.CheckBox2.TabIndex = 26
-        Me.CheckBox2.Text = "No"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(450, 352)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(40, 17)
-        Me.CheckBox3.TabIndex = 28
-        Me.CheckBox3.Text = "No"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(384, 352)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(44, 17)
-        Me.CheckBox4.TabIndex = 27
-        Me.CheckBox4.Text = "Yes"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(450, 378)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(40, 17)
-        Me.CheckBox5.TabIndex = 30
-        Me.CheckBox5.Text = "No"
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(384, 378)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(44, 17)
-        Me.CheckBox6.TabIndex = 29
-        Me.CheckBox6.Text = "Yes"
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'CheckBox7
-        '
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Location = New System.Drawing.Point(450, 405)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(40, 17)
-        Me.CheckBox7.TabIndex = 32
-        Me.CheckBox7.Text = "No"
-        Me.CheckBox7.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(384, 405)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(44, 17)
-        Me.CheckBox8.TabIndex = 31
-        Me.CheckBox8.Text = "Yes"
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(139, 454)
+        Me.btnSubmit.Location = New System.Drawing.Point(152, 508)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
         Me.btnSubmit.TabIndex = 33
@@ -407,21 +339,145 @@ Partial Class Form1
         Me.lblTimer.Size = New System.Drawing.Size(0, 13)
         Me.lblTimer.TabIndex = 34
         '
+        'grpbxQ1
+        '
+        Me.grpbxQ1.Controls.Add(Me.rbNo1)
+        Me.grpbxQ1.Controls.Add(Me.rbYes1)
+        Me.grpbxQ1.Location = New System.Drawing.Point(361, 303)
+        Me.grpbxQ1.Name = "grpbxQ1"
+        Me.grpbxQ1.Size = New System.Drawing.Size(119, 42)
+        Me.grpbxQ1.TabIndex = 35
+        Me.grpbxQ1.TabStop = False
+        '
+        'rbNo1
+        '
+        Me.rbNo1.AutoSize = True
+        Me.rbNo1.Location = New System.Drawing.Point(72, 19)
+        Me.rbNo1.Name = "rbNo1"
+        Me.rbNo1.Size = New System.Drawing.Size(39, 17)
+        Me.rbNo1.TabIndex = 13
+        Me.rbNo1.TabStop = True
+        Me.rbNo1.Text = "No"
+        Me.rbNo1.UseVisualStyleBackColor = True
+        '
+        'rbYes1
+        '
+        Me.rbYes1.AutoSize = True
+        Me.rbYes1.Location = New System.Drawing.Point(18, 19)
+        Me.rbYes1.Name = "rbYes1"
+        Me.rbYes1.Size = New System.Drawing.Size(43, 17)
+        Me.rbYes1.TabIndex = 12
+        Me.rbYes1.TabStop = True
+        Me.rbYes1.Text = "Yes"
+        Me.rbYes1.UseVisualStyleBackColor = True
+        '
+        'grpbxQ2
+        '
+        Me.grpbxQ2.Controls.Add(Me.rbNo2)
+        Me.grpbxQ2.Controls.Add(Me.rbYes2)
+        Me.grpbxQ2.Location = New System.Drawing.Point(361, 351)
+        Me.grpbxQ2.Name = "grpbxQ2"
+        Me.grpbxQ2.Size = New System.Drawing.Size(119, 42)
+        Me.grpbxQ2.TabIndex = 15
+        Me.grpbxQ2.TabStop = False
+        '
+        'rbNo2
+        '
+        Me.rbNo2.AutoSize = True
+        Me.rbNo2.Location = New System.Drawing.Point(72, 14)
+        Me.rbNo2.Name = "rbNo2"
+        Me.rbNo2.Size = New System.Drawing.Size(39, 17)
+        Me.rbNo2.TabIndex = 13
+        Me.rbNo2.TabStop = True
+        Me.rbNo2.Text = "No"
+        Me.rbNo2.UseVisualStyleBackColor = True
+        '
+        'rbYes2
+        '
+        Me.rbYes2.AutoSize = True
+        Me.rbYes2.Location = New System.Drawing.Point(18, 14)
+        Me.rbYes2.Name = "rbYes2"
+        Me.rbYes2.Size = New System.Drawing.Size(43, 17)
+        Me.rbYes2.TabIndex = 12
+        Me.rbYes2.TabStop = True
+        Me.rbYes2.Text = "Yes"
+        Me.rbYes2.UseVisualStyleBackColor = True
+        '
+        'grpbxQ3
+        '
+        Me.grpbxQ3.Controls.Add(Me.rbNo3)
+        Me.grpbxQ3.Controls.Add(Me.rbYes3)
+        Me.grpbxQ3.Location = New System.Drawing.Point(361, 399)
+        Me.grpbxQ3.Name = "grpbxQ3"
+        Me.grpbxQ3.Size = New System.Drawing.Size(119, 42)
+        Me.grpbxQ3.TabIndex = 36
+        Me.grpbxQ3.TabStop = False
+        '
+        'rbNo3
+        '
+        Me.rbNo3.AutoSize = True
+        Me.rbNo3.Location = New System.Drawing.Point(72, 14)
+        Me.rbNo3.Name = "rbNo3"
+        Me.rbNo3.Size = New System.Drawing.Size(39, 17)
+        Me.rbNo3.TabIndex = 13
+        Me.rbNo3.TabStop = True
+        Me.rbNo3.Text = "No"
+        Me.rbNo3.UseVisualStyleBackColor = True
+        '
+        'rbYes3
+        '
+        Me.rbYes3.AutoSize = True
+        Me.rbYes3.Location = New System.Drawing.Point(18, 14)
+        Me.rbYes3.Name = "rbYes3"
+        Me.rbYes3.Size = New System.Drawing.Size(43, 17)
+        Me.rbYes3.TabIndex = 12
+        Me.rbYes3.TabStop = True
+        Me.rbYes3.Text = "Yes"
+        Me.rbYes3.UseVisualStyleBackColor = True
+        '
+        'grpbxQ4
+        '
+        Me.grpbxQ4.Controls.Add(Me.rbNo4)
+        Me.grpbxQ4.Controls.Add(Me.rbYes4)
+        Me.grpbxQ4.Location = New System.Drawing.Point(361, 447)
+        Me.grpbxQ4.Name = "grpbxQ4"
+        Me.grpbxQ4.Size = New System.Drawing.Size(119, 42)
+        Me.grpbxQ4.TabIndex = 37
+        Me.grpbxQ4.TabStop = False
+        '
+        'rbNo4
+        '
+        Me.rbNo4.AutoSize = True
+        Me.rbNo4.Location = New System.Drawing.Point(72, 14)
+        Me.rbNo4.Name = "rbNo4"
+        Me.rbNo4.Size = New System.Drawing.Size(39, 17)
+        Me.rbNo4.TabIndex = 13
+        Me.rbNo4.TabStop = True
+        Me.rbNo4.Text = "No"
+        Me.rbNo4.UseVisualStyleBackColor = True
+        '
+        'rbYes4
+        '
+        Me.rbYes4.AutoSize = True
+        Me.rbYes4.Location = New System.Drawing.Point(18, 14)
+        Me.rbYes4.Name = "rbYes4"
+        Me.rbYes4.Size = New System.Drawing.Size(43, 17)
+        Me.rbYes4.TabIndex = 12
+        Me.rbYes4.TabStop = True
+        Me.rbYes4.Text = "Yes"
+        Me.rbYes4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(598, 523)
+        Me.ClientSize = New System.Drawing.Size(598, 567)
+        Me.Controls.Add(Me.grpbxQ4)
+        Me.Controls.Add(Me.grpbxQ3)
+        Me.Controls.Add(Me.grpbxQ2)
+        Me.Controls.Add(Me.grpbxQ1)
         Me.Controls.Add(Me.lblTimer)
         Me.Controls.Add(Me.btnSubmit)
-        Me.Controls.Add(Me.CheckBox7)
-        Me.Controls.Add(Me.CheckBox8)
-        Me.Controls.Add(Me.CheckBox5)
-        Me.Controls.Add(Me.CheckBox6)
-        Me.Controls.Add(Me.CheckBox3)
-        Me.Controls.Add(Me.CheckBox4)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.lblQuestion1)
         Me.Controls.Add(Me.LblQuestion4)
         Me.Controls.Add(Me.lblQuestion3)
@@ -432,7 +488,7 @@ Partial Class Form1
         Me.Controls.Add(Me.lblTemperature)
         Me.Controls.Add(Me.txtbxPhoneNumber)
         Me.Controls.Add(Me.lblPhoneNumber)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.grpbxGender)
         Me.Controls.Add(Me.txtbxAge)
         Me.Controls.Add(Me.lblAge)
         Me.Controls.Add(Me.txtbxAddress)
@@ -451,8 +507,16 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpbxTitle.ResumeLayout(False)
         Me.grpbxTitle.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.grpbxGender.ResumeLayout(False)
+        Me.grpbxGender.PerformLayout()
+        Me.grpbxQ1.ResumeLayout(False)
+        Me.grpbxQ1.PerformLayout()
+        Me.grpbxQ2.ResumeLayout(False)
+        Me.grpbxQ2.PerformLayout()
+        Me.grpbxQ3.ResumeLayout(False)
+        Me.grpbxQ3.PerformLayout()
+        Me.grpbxQ4.ResumeLayout(False)
+        Me.grpbxQ4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -471,10 +535,10 @@ Partial Class Form1
     Friend WithEvents lblAddress As Label
     Friend WithEvents lblAge As Label
     Friend WithEvents txtbxAge As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents lblGender As Label
+    Friend WithEvents rbMale As RadioButton
+    Friend WithEvents rbFemale As RadioButton
+    Friend WithEvents grpbxGender As GroupBox
     Friend WithEvents txtbxPhoneNumber As TextBox
     Friend WithEvents lblPhoneNumber As Label
     Friend WithEvents txtbxTemperature As TextBox
@@ -486,14 +550,18 @@ Partial Class Form1
     Friend WithEvents lblQuestion3 As Label
     Friend WithEvents LblQuestion4 As Label
     Friend WithEvents lblQuestion1 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents CheckBox7 As CheckBox
-    Friend WithEvents CheckBox8 As CheckBox
     Friend WithEvents btnSubmit As Button
     Friend WithEvents lblTimer As Label
+    Friend WithEvents grpbxQ1 As GroupBox
+    Friend WithEvents rbNo1 As RadioButton
+    Friend WithEvents rbYes1 As RadioButton
+    Friend WithEvents grpbxQ2 As GroupBox
+    Friend WithEvents rbNo2 As RadioButton
+    Friend WithEvents rbYes2 As RadioButton
+    Friend WithEvents grpbxQ3 As GroupBox
+    Friend WithEvents rbNo3 As RadioButton
+    Friend WithEvents rbYes3 As RadioButton
+    Friend WithEvents grpbxQ4 As GroupBox
+    Friend WithEvents rbNo4 As RadioButton
+    Friend WithEvents rbYes4 As RadioButton
 End Class

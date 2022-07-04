@@ -11,6 +11,9 @@
         form.WriteLine("Last Name: " + txtbxLastName.Text)
         form.WriteLine("Complete Address: " + txtbxAddress.Text)
         form.WriteLine("Age: " + txtbxAge.Text)
+        form.WriteLine("Phone Number: " + txtbxPhoneNumber.Text)
+        form.WriteLine("Temperature: " + txtbxTemperature.Text)
+        form.WriteLine("Gender: ")
 
 
 
@@ -38,6 +41,16 @@
                 MessageBox.Show("This field is up to 2 digits only")
             End If
         End If
-
     End Sub
+
+    Private Sub txtbxTemperature_keypress(sender As Object, e As KeyPressEventArgs) Handles txtbxTemperature.KeyPress
+        If txtbxTemperature.Text.Length >= 2 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+                MessageBox.Show("This field is up to 2 digits only")
+            End If
+        End If
+    End Sub
+
+
 End Class
