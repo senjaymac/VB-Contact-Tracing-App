@@ -29,7 +29,7 @@ Partial Class Form1
         Me.lblPleaseFillUp = New System.Windows.Forms.Label()
         Me.lblContactTraceForm = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.txtboxFirstName = New System.Windows.Forms.TextBox()
+        Me.txtbxFirstName = New System.Windows.Forms.TextBox()
         Me.txtbxLastName = New System.Windows.Forms.TextBox()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.txtbxAddress = New System.Windows.Forms.TextBox()
@@ -121,12 +121,12 @@ Partial Class Form1
         Me.lblFirstName.TabIndex = 3
         Me.lblFirstName.Text = "First Name:"
         '
-        'txtboxFirstName
+        'txtbxFirstName
         '
-        Me.txtboxFirstName.Location = New System.Drawing.Point(119, 179)
-        Me.txtboxFirstName.Name = "txtboxFirstName"
-        Me.txtboxFirstName.Size = New System.Drawing.Size(170, 20)
-        Me.txtboxFirstName.TabIndex = 4
+        Me.txtbxFirstName.Location = New System.Drawing.Point(119, 179)
+        Me.txtbxFirstName.Name = "txtbxFirstName"
+        Me.txtbxFirstName.Size = New System.Drawing.Size(170, 20)
+        Me.txtbxFirstName.TabIndex = 4
         '
         'txtbxLastName
         '
@@ -439,7 +439,7 @@ Partial Class Form1
         Me.Controls.Add(Me.lblAddress)
         Me.Controls.Add(Me.txtbxLastName)
         Me.Controls.Add(Me.lblLastName)
-        Me.Controls.Add(Me.txtboxFirstName)
+        Me.Controls.Add(Me.txtbxFirstName)
         Me.Controls.Add(Me.lblFirstName)
         Me.Controls.Add(Me.grpbxTitle)
         Me.Controls.Add(Me.pickerDate)
@@ -464,7 +464,7 @@ Partial Class Form1
     Friend WithEvents lblPleaseFillUp As Label
     Friend WithEvents lblContactTraceForm As Label
     Friend WithEvents lblFirstName As Label
-    Friend WithEvents txtboxFirstName As TextBox
+    Friend WithEvents txtbxFirstName As TextBox
     Friend WithEvents txtbxLastName As TextBox
     Friend WithEvents lblLastName As Label
     Friend WithEvents txtbxAddress As TextBox

@@ -7,9 +7,10 @@
         form.WriteLine("Date: " + pickerDate.Text)
         form.WriteLine("Time: " + DateTime.Now.ToString("h:mm:ss tt"))
         form.WriteLine("Personal Informations")
-        form.WriteLine("First Name: " + txtboxFirstName.Text)
+        form.WriteLine("First Name: " + txtbxFirstName.Text)
         form.WriteLine("Last Name: " + txtbxLastName.Text)
-
+        form.WriteLine("Complete Address: " + txtbxAddress.Text)
+        form.WriteLine("Age: " + txtbxAge.Text)
 
 
 
@@ -19,6 +20,24 @@
     Private Sub time(sender As Object, e As EventArgs) Handles timerClock.Tick
 
         lblTimer.Text = DateTime.Now.ToLongTimeString()
+
+    End Sub
+
+    Private Sub txtbxNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtbxPhoneNumber.KeyPress, txtbxAge.KeyPress, MyBase.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
+            MessageBox.Show("Please Input Numbers Only on this Field!")
+
+        End If
+    End Sub
+
+    Private Sub txtbxAge_keypress(sender As Object, e As KeyPressEventArgs) Handles txtbxAge.KeyPress
+        If txtbxAge.Text.Length >= 2 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+                MessageBox.Show("This field is up to 2 digits only")
+            End If
+        End If
 
     End Sub
 End Class
