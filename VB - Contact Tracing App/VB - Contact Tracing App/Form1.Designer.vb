@@ -356,7 +356,6 @@ Partial Class Form1
         Me.rbNo1.Name = "rbNo1"
         Me.rbNo1.Size = New System.Drawing.Size(39, 17)
         Me.rbNo1.TabIndex = 13
-        Me.rbNo1.TabStop = True
         Me.rbNo1.Text = "No"
         Me.rbNo1.UseVisualStyleBackColor = True
         '
@@ -367,7 +366,6 @@ Partial Class Form1
         Me.rbYes1.Name = "rbYes1"
         Me.rbYes1.Size = New System.Drawing.Size(43, 17)
         Me.rbYes1.TabIndex = 12
-        Me.rbYes1.TabStop = True
         Me.rbYes1.Text = "Yes"
         Me.rbYes1.UseVisualStyleBackColor = True
         '
@@ -388,7 +386,6 @@ Partial Class Form1
         Me.rbNo2.Name = "rbNo2"
         Me.rbNo2.Size = New System.Drawing.Size(39, 17)
         Me.rbNo2.TabIndex = 13
-        Me.rbNo2.TabStop = True
         Me.rbNo2.Text = "No"
         Me.rbNo2.UseVisualStyleBackColor = True
         '
@@ -399,7 +396,6 @@ Partial Class Form1
         Me.rbYes2.Name = "rbYes2"
         Me.rbYes2.Size = New System.Drawing.Size(43, 17)
         Me.rbYes2.TabIndex = 12
-        Me.rbYes2.TabStop = True
         Me.rbYes2.Text = "Yes"
         Me.rbYes2.UseVisualStyleBackColor = True
         '

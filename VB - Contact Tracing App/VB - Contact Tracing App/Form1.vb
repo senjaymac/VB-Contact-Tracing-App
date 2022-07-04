@@ -1,11 +1,13 @@
 ﻿Public Class Form1
+    Dim Gender, Q1, Q2 As String
+
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         Dim form As System.IO.StreamWriter
         form = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\Element 54\Documents\Repos\VB - Contact Tracing\VB - Contact Tracing App\Contact TracingForm.Txt", True)
-        form.WriteLine("Contact Tracing Form")
         form.WriteLine("")
         form.WriteLine("Date: " + pickerDate.Text)
         form.WriteLine("Time: " + DateTime.Now.ToString("h:mm:ss tt"))
+        form.WriteLine("")
         form.WriteLine("Personal Informations")
         form.WriteLine("First Name: " + txtbxFirstName.Text)
         form.WriteLine("Last Name: " + txtbxLastName.Text)
@@ -13,12 +15,22 @@
         form.WriteLine("Age: " + txtbxAge.Text)
         form.WriteLine("Phone Number: " + txtbxPhoneNumber.Text)
         form.WriteLine("Temperature: " + txtbxTemperature.Text)
-        form.WriteLine("Gender: ")
-
-
-
+        form.WriteLine("Gender: " + Gender)
+        form.WriteLine("")
+        form.WriteLine("Health Questions")
+        form.WriteLine("Have you've been tested for COVID-19? " + Q1)
+        form.WriteLine("Are you experiencing any sickness recently? " + Q1)
+        form.WriteLine("Have you traveled outside of the country in the past 14days? " + Q1)
+        form.WriteLine("Do you have a close contact with a probable covid 19 person? " + Q1)
+        form.WriteLine("__________________________________________________________________________")
+        form.WriteLine("")
+        form.WriteLine("")
+        MessageBox.Show("Succesfully Submitted, Thank You!")
         form.Close()
+
+
     End Sub
+
 
     Private Sub time(sender As Object, e As EventArgs) Handles timerClock.Tick
 
@@ -41,6 +53,46 @@
                 MessageBox.Show("This field is up to 2 digits only")
             End If
         End If
+    End Sub
+
+    Private Sub rbYes4_CheckedChanged(sender As Object, e As EventArgs) Handles rbYes4.CheckedChanged
+        Q1 = "Yes"
+    End Sub
+
+    Private Sub rbYes3_CheckedChanged(sender As Object, e As EventArgs) Handles rbYes3.CheckedChanged
+        Q1 = "Yes"
+    End Sub
+
+    Private Sub rbYes2_CheckedChanged(sender As Object, e As EventArgs) Handles rbYes2.CheckedChanged
+        Q1 = "Yes"
+    End Sub
+
+    Private Sub rbYes1_CheckedChanged(sender As Object, e As EventArgs) Handles rbYes1.CheckedChanged
+        Q1 = "Yes"
+    End Sub
+
+    Private Sub rbNo1_CheckedChanged(sender As Object, e As EventArgs) Handles rbNo1.CheckedChanged
+        Q2 = "No"
+    End Sub
+
+    Private Sub rbNo3_CheckedChanged(sender As Object, e As EventArgs) Handles rbNo3.CheckedChanged
+        Q2 = "No"
+    End Sub
+
+    Private Sub rbNo2_CheckedChanged(sender As Object, e As EventArgs) Handles rbNo2.CheckedChanged
+        Q2 = "No"
+    End Sub
+
+    Private Sub rbMale_CheckedChanged(sender As Object, e As EventArgs) Handles rbMale.CheckedChanged
+        Gender = "Male"
+    End Sub
+
+    Private Sub rbFemale_CheckedChanged(sender As Object, e As EventArgs) Handles rbFemale.CheckedChanged
+        Gender = "Female"
+    End Sub
+
+    Private Sub rbNo4_CheckedChanged(sender As Object, e As EventArgs) Handles rbNo4.CheckedChanged
+        Q2 = "No"
     End Sub
 
     Private Sub txtbxTemperature_keypress(sender As Object, e As KeyPressEventArgs) Handles txtbxTemperature.KeyPress
